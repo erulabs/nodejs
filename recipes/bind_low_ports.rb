@@ -11,4 +11,4 @@ when 'redhat', 'centos', 'fedora', 'amazon', 'scientific'
   package 'libcap'
 end
 
-execute 'setcap cap_net_bind_service=+ep $(readlink /usr/local/bin/node)'
+execute 'setcap cap_net_bind_service=+ep $(readlink -f /usr/local/bin/node)'
